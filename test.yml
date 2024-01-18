@@ -6,10 +6,10 @@
   tasks:
     - name: Create ticket on Jira for website down
       community.general.jira:
-        uri: 'https://agnel.atlassian.net'
-        username: 'platformansible@gmail.com'
-        password: 'ATATT3xFfGF0xME2CG6prqR6nDy7iolsCirA6dOof_IP39ofv6XJnFLMZ9TxgOjotg5IO0SAH-DztdVH644aZmL4JgkpsjjMKl_HJt97E-XW6O1xIhYKYopP_pox9qosXMibMuw7Gr4V4KKTUVpR2HbYegm6HHmXzPC51Gzt8_VbKd7PKdMxCYY=94A77412'
-        project: AUT
+        uri: 'https://ashvini-chavan.atlassian.net/'
+        username: 'ashvini.chavan@wysetek.com'
+        password: 'ATATT3xFfGF0v6U-ujN8xYxdXaIyl2RH4Gq0dbIN0UH4x2SoeL48xnbLAgGUBTdz3TkVZq5kBpBfLprVCGDP3chSlWPKQxLEGhaeDm6AEJBkfLGNJwygPdHRNCrl0n2wtou9dcBElzGbBnnRWFDzlfiv_6PqceVBhmy8mLU3jx20LdDg6L25yRU=F5D5201A'
+        project: TRAC
         operation: create
         account_id: '712020:15bec00b-c156-4698-a964-8c125cb05fc0'
         summary: Website is down on server "{{ ansible_default_ipv4.address }}"

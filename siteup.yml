@@ -1,6 +1,6 @@
 ---
 - name: Site is up
-  hosts: all
+  hosts: web
   gather_facts: false
   tasks:
     - name: Print message       
