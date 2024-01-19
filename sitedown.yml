@@ -1,6 +1,8 @@
 ---
 - name: Site Down
   hosts: web
+  vars_files: 
+    - token.yml
   gather_facts: true
   become: true
   tasks:
@@ -11,8 +13,8 @@
     - name: Create ticket on Jira for website down
       community.general.jira:
         uri: 'https://ashvini-chavan.atlassian.net/'
-        username: 'platformansible@gmail.com'
-        password: 'ATATT3xFfGF0U-7_QtWyEZJ4Ykfz9H7MQJ7-gYAgxq8bUH-ojixZa2JS3O1BU5oc6HTgnZ9hIwdmAjyTa-Zw2erUtgc62Fj8qqAiDblH0VmN83cQh6rZWFVR-SqVoV2yogk3Q9koUd_tZW-08m6j3b8ywK__fErXS29e3QgyUrk4LQ4cYvO5NSQ=74BE4348'
+        username: '{{my_username}}'
+        password: '{{my_password}}'
         project: AN
         operation: create
         account_id: '712020:15bec00b-c156-4698-a964-8c125cb05fc0'
@@ -30,8 +32,8 @@
     - name: Comment on issue
       community.general.jira:
         uri: 'https://ashvini-chavan.atlassian.net/'
-        username: 'platformansible@gmail.com'
-        password: 'ATATT3xFfGF0U-7_QtWyEZJ4Ykfz9H7MQJ7-gYAgxq8bUH-ojixZa2JS3O1BU5oc6HTgnZ9hIwdmAjyTa-Zw2erUtgc62Fj8qqAiDblH0VmN83cQh6rZWFVR-SqVoV2yogk3Q9koUd_tZW-08m6j3b8ywK__fErXS29e3QgyUrk4LQ4cYvO5NSQ=74BE4348'
+        username: '{{my_username}}'
+        password: '{{my_password}}'
         issue: '{{ issue.meta.key }}'
         operation: comment
         comment: "Hi Team,\n
@@ -57,8 +59,8 @@
     - name: Comment on issue
       community.general.jira:
         uri: 'https://ashvini-chavan.atlassian.net/'
-        username: 'platformansible@gmail.com'
-        password: 'ATATT3xFfGF0U-7_QtWyEZJ4Ykfz9H7MQJ7-gYAgxq8bUH-ojixZa2JS3O1BU5oc6HTgnZ9hIwdmAjyTa-Zw2erUtgc62Fj8qqAiDblH0VmN83cQh6rZWFVR-SqVoV2yogk3Q9koUd_tZW-08m6j3b8ywK__fErXS29e3QgyUrk4LQ4cYvO5NSQ=74BE4348'
+        username: '{{my_username}}'
+        password: '{{my_password}}'
         issue: '{{ issue.meta.key }}'
         operation: comment
         comment: "Hi Team,\n 
@@ -71,8 +73,8 @@
     - name: Resolve the issue
       community.general.jira:
         uri: 'https://ashvini-chavan.atlassian.net/'
-        username: 'platformansible@gmail.com'
-        password: 'ATATT3xFfGF0U-7_QtWyEZJ4Ykfz9H7MQJ7-gYAgxq8bUH-ojixZa2JS3O1BU5oc6HTgnZ9hIwdmAjyTa-Zw2erUtgc62Fj8qqAiDblH0VmN83cQh6rZWFVR-SqVoV2yogk3Q9koUd_tZW-08m6j3b8ywK__fErXS29e3QgyUrk4LQ4cYvO5NSQ=74BE4348'
+        username: '{{my_username}}'
+        password: '{{my_password}}'
         issue: '{{ issue.meta.key }}'
         operation: transition
         status: 'Resolve' 
