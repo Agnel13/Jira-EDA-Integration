@@ -12,7 +12,7 @@
       community.general.jira:
         uri: 'https://ashvini-chavan.atlassian.net/'
         username: 'platformansible@gmail.com'
-        password: 'ATATT3xFfGF0by2W3C8hVRuxDGLfcocsRCZz5-7C5I0QGuuffOuXghGY2XzXT8SiY55GRzHD3dePpoEbTBmjdNYFAa1tjDfaa0-qCYk9vO5dIFNRBWevA12TR5ukquPpiYCjtHL6IGksP3L4N2_gR1MR_8eAVhNwV75dWH_qkORBLVSmQOhpMh4=9B03A9B7'
+        password: 'ATATT3xFfGF0U-7_QtWyEZJ4Ykfz9H7MQJ7-gYAgxq8bUH-ojixZa2JS3O1BU5oc6HTgnZ9hIwdmAjyTa-Zw2erUtgc62Fj8qqAiDblH0VmN83cQh6rZWFVR-SqVoV2yogk3Q9koUd_tZW-08m6j3b8ywK__fErXS29e3QgyUrk4LQ4cYvO5NSQ=74BE4348'
         project: AN
         operation: create
         account_id: '712020:15bec00b-c156-4698-a964-8c125cb05fc0'
@@ -31,7 +31,7 @@
       community.general.jira:
         uri: 'https://ashvini-chavan.atlassian.net/'
         username: 'platformansible@gmail.com'
-        password: 'ATATT3xFfGF0by2W3C8hVRuxDGLfcocsRCZz5-7C5I0QGuuffOuXghGY2XzXT8SiY55GRzHD3dePpoEbTBmjdNYFAa1tjDfaa0-qCYk9vO5dIFNRBWevA12TR5ukquPpiYCjtHL6IGksP3L4N2_gR1MR_8eAVhNwV75dWH_qkORBLVSmQOhpMh4=9B03A9B7'
+        password: 'ATATT3xFfGF0U-7_QtWyEZJ4Ykfz9H7MQJ7-gYAgxq8bUH-ojixZa2JS3O1BU5oc6HTgnZ9hIwdmAjyTa-Zw2erUtgc62Fj8qqAiDblH0VmN83cQh6rZWFVR-SqVoV2yogk3Q9koUd_tZW-08m6j3b8ywK__fErXS29e3QgyUrk4LQ4cYvO5NSQ=74BE4348'
         issue: '{{ issue.meta.key }}'
         operation: comment
         comment: "Hi Team,\n
@@ -58,7 +58,7 @@
       community.general.jira:
         uri: 'https://ashvini-chavan.atlassian.net/'
         username: 'platformansible@gmail.com'
-        password: 'ATATT3xFfGF0by2W3C8hVRuxDGLfcocsRCZz5-7C5I0QGuuffOuXghGY2XzXT8SiY55GRzHD3dePpoEbTBmjdNYFAa1tjDfaa0-qCYk9vO5dIFNRBWevA12TR5ukquPpiYCjtHL6IGksP3L4N2_gR1MR_8eAVhNwV75dWH_qkORBLVSmQOhpMh4=9B03A9B7'
+        password: 'ATATT3xFfGF0U-7_QtWyEZJ4Ykfz9H7MQJ7-gYAgxq8bUH-ojixZa2JS3O1BU5oc6HTgnZ9hIwdmAjyTa-Zw2erUtgc62Fj8qqAiDblH0VmN83cQh6rZWFVR-SqVoV2yogk3Q9koUd_tZW-08m6j3b8ywK__fErXS29e3QgyUrk4LQ4cYvO5NSQ=74BE4348'
         issue: '{{ issue.meta.key }}'
         operation: comment
         comment: "Hi Team,\n 
@@ -72,7 +72,7 @@
       community.general.jira:
         uri: 'https://ashvini-chavan.atlassian.net/'
         username: 'platformansible@gmail.com'
-        password: 'ATATT3xFfGF0by2W3C8hVRuxDGLfcocsRCZz5-7C5I0QGuuffOuXghGY2XzXT8SiY55GRzHD3dePpoEbTBmjdNYFAa1tjDfaa0-qCYk9vO5dIFNRBWevA12TR5ukquPpiYCjtHL6IGksP3L4N2_gR1MR_8eAVhNwV75dWH_qkORBLVSmQOhpMh4=9B03A9B7'
+        password: 'ATATT3xFfGF0U-7_QtWyEZJ4Ykfz9H7MQJ7-gYAgxq8bUH-ojixZa2JS3O1BU5oc6HTgnZ9hIwdmAjyTa-Zw2erUtgc62Fj8qqAiDblH0VmN83cQh6rZWFVR-SqVoV2yogk3Q9koUd_tZW-08m6j3b8ywK__fErXS29e3QgyUrk4LQ4cYvO5NSQ=74BE4348'
         issue: '{{ issue.meta.key }}'
         operation: transition
         status: 'Resolve' 
