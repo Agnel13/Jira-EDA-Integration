@@ -6,7 +6,7 @@
   gather_facts: true
   become: true
   tasks:
-    - name: Print Website down message
+    - name: Print message
       debug:
         msg: "Website is down!"
 
@@ -15,7 +15,7 @@
       register: httpd_status
       ignore_errors: true
 
-    - name: Create ticket on Jira for website down with service status info
+    - name: Create ticket on Jira for website down
       community.general.jira:
         uri: 'https://ashvini-chavan.atlassian.net/'
         username: '{{my_username}}'
@@ -36,7 +36,7 @@
         issuetype: '[System] Incident'
       register: issue
     
-    - name: Comment on issue to inform user we are working on the issue
+    - name: Comment on issue
       community.general.jira:
         uri: 'https://ashvini-chavan.atlassian.net/'
         username: '{{my_username}}'
@@ -63,12 +63,7 @@
         name: httpd
         state: restarted
 
-    - name: Get the status of Apache service
-      shell: "systemctl status httpd"
-      register: httpd_status
-      ignore_errors: true
-        
-    - name: Comment on issue after firewall port open and service restart
+    - name: Comment on issue
       community.general.jira:
         uri: 'https://ashvini-chavan.atlassian.net/'
         username: '{{my_username}}'
@@ -87,7 +82,7 @@
         Thanks and Regards,\n
         Ansible"
 
-    - name: Resolve the issue 
+    - name: Resolve the issue
       community.general.jira:
         uri: 'https://ashvini-chavan.atlassian.net/'
         username: '{{my_username}}'

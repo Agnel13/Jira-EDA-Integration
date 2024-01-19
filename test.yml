@@ -6,6 +6,7 @@
     - name: Gather facts 
       shell: 'systemctl status httpd'
       register: httpd_status
+      ignore_errors: true
 
     - name: Print service facts
       debug:
