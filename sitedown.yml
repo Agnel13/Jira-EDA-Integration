@@ -11,9 +11,9 @@
     - name: Create ticket on Jira for website down
       community.general.jira:
         uri: 'https://ashvini-chavan.atlassian.net/'
-        username: 'ashvini.chavan@wysetek.com'
-        password: 'ATATT3xFfGF0v6U-ujN8xYxdXaIyl2RH4Gq0dbIN0UH4x2SoeL48xnbLAgGUBTdz3TkVZq5kBpBfLprVCGDP3chSlWPKQxLEGhaeDm6AEJBkfLGNJwygPdHRNCrl0n2wtou9dcBElzGbBnnRWFDzlfiv_6PqceVBhmy8mLU3jx20LdDg6L25yRU=F5D5201A'
-        project: TRAC
+        username: 'platformansible@gmail.com'
+        password: 'ATATT3xFfGF0zc6N4Vz0V_VT_TU7sF_gjCWYaYpVQxPm_0a8DZ52tt_STe0YzgjKG98dEuZLzstCMpR_CUgGoJQ6yfuJ2yO-YcwUD21Uqnj3wmSDOQ9Qexg187o2C9XMGci46AM0IENZ6B7EHr2dExrDczkLAsKkoossfHw8RVxmEG4USGRxJ-s=883C7241'
+        project: AN
         operation: create
         account_id: '712020:15bec00b-c156-4698-a964-8c125cb05fc0'
         summary: "Website is down on server '{{ ansible_default_ipv4.address }}'"
@@ -30,16 +30,16 @@
     - name: Comment on issue
       community.general.jira:
         uri: 'https://ashvini-chavan.atlassian.net/'
-        username: 'ashvini.chavan@wysetek.com'
-        password: 'ATATT3xFfGF0v6U-ujN8xYxdXaIyl2RH4Gq0dbIN0UH4x2SoeL48xnbLAgGUBTdz3TkVZq5kBpBfLprVCGDP3chSlWPKQxLEGhaeDm6AEJBkfLGNJwygPdHRNCrl0n2wtou9dcBElzGbBnnRWFDzlfiv_6PqceVBhmy8mLU3jx20LdDg6L25yRU=F5D5201A'
+        username: 'platformansible@gmail.com'
+        password: 'ATATT3xFfGF0zc6N4Vz0V_VT_TU7sF_gjCWYaYpVQxPm_0a8DZ52tt_STe0YzgjKG98dEuZLzstCMpR_CUgGoJQ6yfuJ2yO-YcwUD21Uqnj3wmSDOQ9Qexg187o2C9XMGci46AM0IENZ6B7EHr2dExrDczkLAsKkoossfHw8RVxmEG4USGRxJ-s=883C7241'
         issue: '{{ issue.meta.key }}'
         operation: comment
-        comment: "Hi team,\n
+        comment: "Hi Team,\n
         We have received an alert for Website down on this server '{{ ansible_default_ipv4.address }}'.\n
         We are trying to resolve the issue by adding http port in firewall and taking httpd service restart\n
 
 
-        Thanks and Regards\n
+        Thanks and Regards,\n
         Ansible"
 
     - name: "Ensure firewall openings are in place."
@@ -57,11 +57,11 @@
     - name: Comment on issue
       community.general.jira:
         uri: 'https://ashvini-chavan.atlassian.net/'
-        username: 'ashvini.chavan@wysetek.com'
-        password: 'ATATT3xFfGF0v6U-ujN8xYxdXaIyl2RH4Gq0dbIN0UH4x2SoeL48xnbLAgGUBTdz3TkVZq5kBpBfLprVCGDP3chSlWPKQxLEGhaeDm6AEJBkfLGNJwygPdHRNCrl0n2wtou9dcBElzGbBnnRWFDzlfiv_6PqceVBhmy8mLU3jx20LdDg6L25yRU=F5D5201A'
+        username: 'platformansible@gmail.com'
+        password: 'ATATT3xFfGF0zc6N4Vz0V_VT_TU7sF_gjCWYaYpVQxPm_0a8DZ52tt_STe0YzgjKG98dEuZLzstCMpR_CUgGoJQ6yfuJ2yO-YcwUD21Uqnj3wmSDOQ9Qexg187o2C9XMGci46AM0IENZ6B7EHr2dExrDczkLAsKkoossfHw8RVxmEG4USGRxJ-s=883C7241'
         issue: '{{ issue.meta.key }}'
         operation: comment
-        comment: "Hi team,\n 
+        comment: "Hi Team,\n 
         We have taken the Apache server restart and added the port to firewall and going forward to resolve the issue. \n
 
 
@@ -71,8 +71,8 @@
     - name: Resolve the issue
       community.general.jira:
         uri: 'https://ashvini-chavan.atlassian.net/'
-        username: 'ashvini.chavan@wysetek.com'
-        password: 'ATATT3xFfGF0v6U-ujN8xYxdXaIyl2RH4Gq0dbIN0UH4x2SoeL48xnbLAgGUBTdz3TkVZq5kBpBfLprVCGDP3chSlWPKQxLEGhaeDm6AEJBkfLGNJwygPdHRNCrl0n2wtou9dcBElzGbBnnRWFDzlfiv_6PqceVBhmy8mLU3jx20LdDg6L25yRU=F5D5201A'
+        username: 'platformansible@gmail.com'
+        password: 'ATATT3xFfGF0zc6N4Vz0V_VT_TU7sF_gjCWYaYpVQxPm_0a8DZ52tt_STe0YzgjKG98dEuZLzstCMpR_CUgGoJQ6yfuJ2yO-YcwUD21Uqnj3wmSDOQ9Qexg187o2C9XMGci46AM0IENZ6B7EHr2dExrDczkLAsKkoossfHw8RVxmEG4USGRxJ-s=883C7241'
         issue: '{{ issue.meta.key }}'
         operation: transition
         status: 'Resolve' 
