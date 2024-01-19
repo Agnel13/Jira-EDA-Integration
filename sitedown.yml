@@ -10,6 +10,10 @@
       debug:
         msg: "Website is down!"
 
+    - name: Get the status of Apache service
+      shell: "systemctl status httpd"
+      register: httpd_status
+
     - name: Create ticket on Jira for website down
       community.general.jira:
         uri: 'https://ashvini-chavan.atlassian.net/'
@@ -22,6 +26,8 @@
         description: "Hello Team,\n
         The website is down on the server: '{{ ansible_default_ipv4.address }}'\n
         We are trying to resolve the issue!\n
+        Below is the status of HTTPD service:\n
+        '{{httpd_status.stdout_lines}}'\n
 
 
         Thanks and Regards,\n
@@ -64,7 +70,12 @@
         issue: '{{ issue.meta.key }}'
         operation: comment
         comment: "Hi Team,\n 
-        We have taken the Apache server restart and added the port to firewall and going forward to resolve the issue. \n
+        We have taken the Apache server restart and added the port to firewall.\n
+        Below is the status of HTTPD service:\n
+        '{{httpd_status.stdout_lines}}'\n
+
+        Hence, moving forward to resolve the issue!
+
 
 
         Thanks and Regards,\n

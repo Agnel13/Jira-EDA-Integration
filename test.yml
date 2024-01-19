@@ -1,18 +1,12 @@
 ---
-- name: Site Down
+- name: Test
   hosts: all
   gather_facts: true
-  become: true
   tasks:
-    - name: Create ticket on Jira for website down
-      community.general.jira:
-        uri: 'https://ashvini-chavan.atlassian.net/'
-        username: 'ashvini.chavan@wysetek.com'
-        password: 'ATATT3xFfGF0v6U-ujN8xYxdXaIyl2RH4Gq0dbIN0UH4x2SoeL48xnbLAgGUBTdz3TkVZq5kBpBfLprVCGDP3chSlWPKQxLEGhaeDm6AEJBkfLGNJwygPdHRNCrl0n2wtou9dcBElzGbBnnRWFDzlfiv_6PqceVBhmy8mLU3jx20LdDg6L25yRU=F5D5201A'
-        project: TRAC
-        operation: create
-        account_id: '712020:15bec00b-c156-4698-a964-8c125cb05fc0'
-        summary: Website is down on server "{{ ansible_default_ipv4.address }}"
-        description: "Hello Team, The website is down on the server: '{{ ansible_default_ipv4.address }}' We are trying to resolve the issue!"
-        issuetype: '[System] Incident'
-      register: issue
+    - name: Gather facts 
+      shell: 'systemctl status httpd'
+      register: httpd_status
+
+    - name: Print service facts
+      debug:
+        msg: '{{ httpd_status.stdout_lines }}'
