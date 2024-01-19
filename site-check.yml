@@ -15,7 +15,7 @@
     ## Define the action we should take should the condition be met
       action:
         run_job_template:
-          name: 'Jira-EDA-Siteup'
+          name: 'Jira-EDA-SiteUp'
           organization: 'Default'
 
     - name: Web site is down
@@ -23,5 +23,5 @@
     ## Define the action we should take should the condition be met
       action:
         run_job_template:
-          name: 'Jira-EDA-Sitedown'
+          name: 'Jira-EDA-SiteDown'
           organization: 'Default'
